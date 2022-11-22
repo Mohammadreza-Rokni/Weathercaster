@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# dar in ghesmat (url) app khodemuno ke (weather_api) bashe vared mikonim ba estefade az path va include ke import kardim
+ 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('weather_api.urls')),
+    path('', include('weather_api.urls')),# ba dar nazar gereftan in prozhe dakhele '' dar surati ke dakhele URL app morede nazar moredi neveshte bashim  khali mizarim
 ]
