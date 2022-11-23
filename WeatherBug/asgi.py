@@ -1,9 +1,7 @@
 """
-ASGI config for WeatherBug project.
+4 :ASGI config for WeatherBug project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
 
 """
 

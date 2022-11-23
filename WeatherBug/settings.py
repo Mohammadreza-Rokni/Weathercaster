@@ -45,7 +45,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+# 3 : Configure ROOT_URLCONF
 ROOT_URLCONF = 'WeatherBug.urls'
 
 TEMPLATES = [
@@ -63,7 +63,7 @@ TEMPLATES = [
         },
     },
 ]
-
+# 3 : Configure WSGI_APPLICATION
 WSGI_APPLICATION = 'WeatherBug.wsgi.application'
 
 
@@ -108,7 +108,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-# 3 : config static files (CSS, JavaScript, Images)
+# 3 : Configure static files (CSS, JavaScript, Images)
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'

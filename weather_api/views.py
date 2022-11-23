@@ -4,7 +4,7 @@ import requests
 import math
 # from .models import Social
 
-# 7 :Create your views here.
+# 9 :Create your views here.
 def index(request):
     return render(request, "weather_api/home.html")
 

@@ -1,4 +1,4 @@
-""" 4 :WeatherBug URL Configuration
+""" 5 :WeatherBug URL Configuration
 
 The `urlpatterns` list routes URLs to views.
 Examples:
