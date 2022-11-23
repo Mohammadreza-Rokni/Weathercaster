@@ -1,5 +1,5 @@
-
-<!-- We load our static files using load static -->
+<!-- 6 : Add template -->
+<!-- We load our static files using {% load static %} -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +47,7 @@
       <div class="hero" data-bg-image="{% static 'images/banner.png' %}">
         <div class="container">
           <form action="{%url 'result'%}" class="find-location" method="post">
+            <!-- We must use the csrf token in the template -->
             {% csrf_token%}
             <input type="text" name="city" placeholder="Enter your city name..." required>
             <input type="submit" value="Find">

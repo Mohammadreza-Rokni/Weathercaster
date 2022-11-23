@@ -1,4 +1,4 @@
-"""WeatherBug URL Configuration
+""" 4 :WeatherBug URL Configuration
 
 The `urlpatterns` list routes URLs to views.
 Examples:
@@ -15,7 +15,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-# In this part, we enter the url of the desired app (weather api) using the path and include that we imported.
  
 urlpatterns = [
     path('admin/', admin.site.urls),

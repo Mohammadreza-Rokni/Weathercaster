@@ -4,8 +4,7 @@ import requests
 import math
 # from .models import Social
 
-# Create your views here.
-
+# 7 :Create your views here.
 def index(request):
     return render(request, "weather_api/home.html")
 
@@ -14,10 +13,11 @@ def index(request):
 
 def result(request):
     if request.method == "POST":
-        city_name = request.POST["city"].lower()
-        # The values ​​that we want to extract from the openweather site, we do with the commands that are inside the site
-        url = f"http://api.openweathermap.org/data/2.5/forecast?q={city_name}&appid={api_key}"
+        # We often use the POST method,We must use the csrf token in the template
+        city_name = request.POST["city"].lower() 
+        url = f"http://api.openweathermap.org/data/2.5/forecast?q={city_name}&appid={api_key}" #URL address of the desired site
         w_dataset = requests.get(url).json()
+         # The values ​​that we want to extract from the openweather site, we do with the commands that are inside the site
         try:
             context = {
                 ####
@@ -75,6 +75,6 @@ def result(request):
 
         return render(request, "weather_api/results.html", context)
     else:
-    	return redirect('home') #If it is not found, it will be redirected to home
+    	return redirect('home') #If not found, it will be redirected to home
 
 
