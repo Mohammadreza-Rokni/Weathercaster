@@ -15,6 +15,7 @@ def index(request):
 def result(request):
     if request.method == "POST":
         city_name = request.POST["city"].lower()
+        # The values ​​that we want to extract from the openweather site, we do with the commands that are inside the site
         url = f"http://api.openweathermap.org/data/2.5/forecast?q={city_name}&appid={api_key}"
         w_dataset = requests.get(url).json()
         try:
@@ -74,6 +75,6 @@ def result(request):
 
         return render(request, "weather_api/results.html", context)
     else:
-    	return redirect('home')
+    	return redirect('home') #If it is not found, it will be redirected to home
 
 
